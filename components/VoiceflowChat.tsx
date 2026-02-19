@@ -45,9 +45,8 @@ export default function VoiceflowChat() {
                             }
                         });
 
-                        // Even more powerful script to force position
-                        const forceTopPosition = () => {
-                            // Target both the shadow host and any direct child elements
+                        // Cleaner script to anchor the chatbot above the Back-to-Top button
+                        const adjustPosition = () => {
                             const selectors = [
                                 '#voiceflow-chat',
                                 '[id^="voiceflow-chat"]',
@@ -59,40 +58,29 @@ export default function VoiceflowChat() {
                             selectors.forEach(selector => {
                                 const elements = document.querySelectorAll(selector);
                                 elements.forEach((el: any) => {
-                                    el.style.setProperty('top', '20px', 'important');
-                                    el.style.setProperty('bottom', 'auto', 'important');
-                                    el.style.setProperty('right', '20px', 'important');
-                                    el.style.setProperty('position', 'fixed', 'important');
-                                    el.style.setProperty('transform', 'none', 'important');
+                                    // Reset distortions
+                                    el.style.top = 'auto';
+                                    el.style.width = 'auto';
+                                    el.style.height = 'auto';
+                                    el.style.bottom = '100px'; // Positioned above the square button
+                                    el.style.right = '32px';
+                                    el.style.position = 'fixed';
 
-                                    // If it's the host, look inside its shadow root
                                     if (el.shadowRoot) {
                                         const children = el.shadowRoot.querySelectorAll('.vfrc-launcher, [class*="launcher"]');
                                         children.forEach((child: any) => {
-                                            child.style.setProperty('top', '20px', 'important');
-                                            child.style.setProperty('bottom', 'auto', 'important');
-                                            child.style.setProperty('right', '20px', 'important');
-                                            child.style.setProperty('position', 'fixed', 'important');
-                                            child.style.setProperty('transform', 'none', 'important');
+                                            child.style.top = 'auto';
+                                            child.style.bottom = '0px';
+                                            child.style.right = '0px';
+                                            child.style.position = 'relative';
                                         });
                                     }
                                 });
                             });
                         };
 
-                        // Use MutationObserver for instant reaction
-                        const observer = new MutationObserver(() => {
-                            forceTopPosition();
-                        });
-
-                        observer.observe(document.body, {
-                            childList: true,
-                            subtree: true
-                        });
-
-                        // Interval as a backup for dynamic internal widget updates
-                        setInterval(forceTopPosition, 100);
-                        forceTopPosition();
+                        setInterval(adjustPosition, 1000);
+                        adjustPosition();
                     }
                 };
 
