@@ -45,6 +45,37 @@ export default function VoiceflowChat() {
                             }
                         });
 
+                        // Surgical script to move to Center Right without distortion
+                        const forceCenterRight = () => {
+                            const host = document.querySelector('#voiceflow-chat, [id^="voiceflow-chat"]');
+                            if (host) {
+                                const el = host as HTMLElement;
+                                el.style.setProperty('position', 'fixed', 'important');
+                                el.style.setProperty('right', '20px', 'important');
+                                el.style.setProperty('bottom', '50%', 'important');
+                                el.style.setProperty('top', 'auto', 'important');
+                                el.style.setProperty('left', 'auto', 'important');
+                                el.style.setProperty('transform', 'translateY(50%)', 'important');
+                                // Crucial: Do NOT set width/height to auto or fixed values here
+                                el.style.setProperty('z-index', '999999', 'important');
+
+                                // Ensure the launcher inside isn't squashed
+                                if (el.shadowRoot) {
+                                    const launcher = el.shadowRoot.querySelector('.vfrc-launcher');
+                                    if (launcher) {
+                                        const l = launcher as HTMLElement;
+                                        l.style.setProperty('position', 'static', 'important');
+                                        l.style.setProperty('bottom', 'auto', 'important');
+                                        l.style.setProperty('right', 'auto', 'important');
+                                    }
+                                }
+                            }
+                        };
+
+                        const observer = new MutationObserver(forceCenterRight);
+                        observer.observe(document.body, { childList: true, subtree: true });
+                        setInterval(forceCenterRight, 500);
+                        forceCenterRight();
                     }
                 };
 

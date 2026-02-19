@@ -160,6 +160,18 @@
 
 /* Global Smoothness */
 
+/* Safe Center-Right Positioning for AI Chatbot */
+#voiceflow-chat,
+[id^="voiceflow-chat"] {
+  position: fixed !important;
+  right: 20px !important;
+  bottom: 50% !important;
+  top: auto !important;
+  left: auto !important;
+  transform: translateY(50%) !important;
+  z-index: 999999 !important;
+}
+
 ::selection {
   @apply bg-rose/30 text-berry;
 }
