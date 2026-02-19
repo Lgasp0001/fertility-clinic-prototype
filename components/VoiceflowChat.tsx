@@ -45,29 +45,27 @@ export default function VoiceflowChat() {
                             }
                         });
 
-                        // Cleaner script to anchor the chatbot above the Back-to-Top button
+                        // Surgical script to move only the launcher/host
                         const adjustPosition = () => {
                             const selectors = [
                                 '#voiceflow-chat',
                                 '[id^="voiceflow-chat"]',
                                 '.vfrc-launcher',
-                                '.vfrc-widget-launcher',
-                                '[class*="vfrc-"]'
+                                '.vfrc-widget-launcher'
                             ];
 
                             selectors.forEach(selector => {
                                 const elements = document.querySelectorAll(selector);
                                 elements.forEach((el: any) => {
-                                    // Reset distortions and move to Center Right
+                                    // Move to Center Right
                                     el.style.top = 'auto';
-                                    el.style.width = 'auto';
-                                    el.style.height = 'auto';
                                     el.style.right = '32px';
                                     el.style.left = 'auto';
                                     el.style.bottom = '50%';
                                     el.style.transform = 'translateY(50%)';
                                     el.style.position = 'fixed';
 
+                                    // Deep target inside Shadow DOM if it's the host
                                     if (el.shadowRoot) {
                                         const children = el.shadowRoot.querySelectorAll('.vfrc-launcher, [class*="launcher"]');
                                         children.forEach((child: any) => {
@@ -82,7 +80,7 @@ export default function VoiceflowChat() {
                             });
                         };
 
-                        setInterval(adjustPosition, 1000);
+                        setInterval(adjustPosition, 200);
                         adjustPosition();
                     }
                 };
