@@ -58,12 +58,14 @@ export default function VoiceflowChat() {
                             selectors.forEach(selector => {
                                 const elements = document.querySelectorAll(selector);
                                 elements.forEach((el: any) => {
-                                    // Reset distortions
+                                    // Reset distortions and move to Center Left
                                     el.style.top = 'auto';
                                     el.style.width = 'auto';
                                     el.style.height = 'auto';
-                                    el.style.bottom = '100px'; // Positioned above the square button
-                                    el.style.right = '32px';
+                                    el.style.left = '32px';
+                                    el.style.right = 'auto';
+                                    el.style.bottom = '50%';
+                                    el.style.transform = 'translateY(50%)';
                                     el.style.position = 'fixed';
 
                                     if (el.shadowRoot) {
@@ -71,7 +73,8 @@ export default function VoiceflowChat() {
                                         children.forEach((child: any) => {
                                             child.style.top = 'auto';
                                             child.style.bottom = '0px';
-                                            child.style.right = '0px';
+                                            child.style.left = '0px';
+                                            child.style.right = 'auto';
                                             child.style.position = 'relative';
                                         });
                                     }
