@@ -160,13 +160,34 @@
 
 /* Global Smoothness */
 /* Voiceflow Mobile Positioning */
+/* Voiceflow Launcher Positioning - Stacked above Back-to-Top */
+/* Using broad selectors to catch different widget parts/tabs like "Test your agent" */
+.vfrc-launcher,
+#voiceflow-chat,
+.vf-widget-launcher,
+.voiceflow-chat,
+[class*="VoiceflowChat"],
+[class*="vfrc-"] {
+  bottom: 120px !important;
+  /* Increased slightly for better visual breathing room on Desktop */
+  right: 32px !important;
+  /* Aligned with Back-to-Top (right-8) */
+  z-index: 10000 !important;
+  /* Ensure it stays above other elements but below major overlays if needed */
+}
+
 @media (max-width: 768px) {
 
   .vfrc-launcher,
   #voiceflow-chat,
-  .vf-widget-launcher {
-    bottom: 208px !important;
+  .vf-widget-launcher,
+  .voiceflow-chat,
+  [class*="VoiceflowChat"],
+  [class*="vfrc-"] {
+    bottom: 216px !important;
+    /* Above Mobile Back-to-Top (128px + 56px + 32px gap) */
     right: 24px !important;
+    /* Aligned with Mobile Back-to-Top (right-6) */
   }
 }
 
