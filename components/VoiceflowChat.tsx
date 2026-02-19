@@ -44,6 +44,54 @@ export default function VoiceflowChat() {
                                 url: "https://runtime-api.voiceflow.com"
                             }
                         });
+
+                        const fixChatbot = () => {
+                            const host = document.querySelector('#voiceflow-chat, [id^="voiceflow-chat"]');
+                            if (host && host.shadowRoot) {
+                                const el = host as HTMLElement;
+
+                                // Reset host to not interfere with Shadow DOM layout
+                                el.style.setProperty('position', 'fixed', 'important');
+                                el.style.setProperty('top', '45vh', 'important');
+                                el.style.setProperty('right', '32px', 'important');
+                                el.style.setProperty('bottom', 'auto', 'important');
+                                el.style.setProperty('width', '80px', 'important');
+                                el.style.setProperty('height', '80px', 'important');
+                                el.style.setProperty('z-index', '9999999', 'important');
+                                el.style.setProperty('overflow', 'visible', 'important');
+
+                                const launcher = host.shadowRoot.querySelector('.vfrc-launcher') as HTMLElement;
+                                const widget = host.shadowRoot.querySelector('.vfrc-widget') as HTMLElement;
+
+                                if (launcher) {
+                                    // Ensure launcher is not squashed and uses absolute positioning relative to host
+                                    launcher.style.setProperty('position', 'absolute', 'important');
+                                    launcher.style.setProperty('top', '0', 'important');
+                                    launcher.style.setProperty('right', '0', 'important');
+                                    launcher.style.setProperty('margin', '0', 'important');
+                                    launcher.style.setProperty('transform', 'none', 'important');
+                                }
+
+                                if (widget) {
+                                    // Position the chat window correctly when it opens
+                                    if (!widget.classList.contains('vfrc-widget--hidden')) {
+                                        el.style.setProperty('width', '400px', 'important');
+                                        el.style.setProperty('height', '600px', 'important');
+                                        widget.style.setProperty('position', 'absolute', 'important');
+                                        widget.style.setProperty('bottom', '0', 'important');
+                                        widget.style.setProperty('right', '0', 'important');
+                                    } else {
+                                        el.style.setProperty('width', '80px', 'important');
+                                        el.style.setProperty('height', '80px', 'important');
+                                    }
+                                }
+                            }
+                        };
+
+                        const observer = new MutationObserver(fixChatbot);
+                        observer.observe(document.body, { childList: true, subtree: true });
+                        setInterval(fixChatbot, 300);
+                        fixChatbot();
                     }
                 };
 
