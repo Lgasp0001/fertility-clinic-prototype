@@ -40,7 +40,7 @@ export default function PatientTransformations() {
                         Experience the <span className="text-rose">Boutique Difference.</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-                        We combine cutting-edge reproductive technology with a nurturing environment designed to support your emotional and physical well-being.
+                        Trade the clinical cold for compassionate precision. Experience world-class care in our boutique South Congress studio.
                     </p>
                 </div>
 
@@ -53,8 +53,8 @@ export default function PatientTransformations() {
                         className="premium-glass p-4 rounded-[2.5rem] bg-gray-50/50"
                     >
                         <ComparisonSlider
-                            beforeImage="/images/transformations/sarah_before.png"
-                            afterImage="/images/transformations/sarah_after.png"
+                            beforeImage="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=80&w=1200"
+                            afterImage="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200"
                         />
                     </motion.div>
 
@@ -62,10 +62,10 @@ export default function PatientTransformations() {
                         <div className="mb-8 md:mb-0">
                             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
                                 <Sparkles className="w-6 h-6 text-rose" />
-                                Personalized Care: Sarah M.
+                                The Boutique Difference
                             </h3>
                             <p className="text-gray-300 text-lg max-w-md">
-                                &ldquo;Moving from a cold hospital setting to the Frosts studio was a revelation. I felt seen, heard, and supported throughout my IVF journey.&rdquo;
+                                &ldquo;Moving from a cold hospital setting to the Frosts studio was a revelation. I felt seen, heard, and supported throughout my entire journey.&rdquo;
                             </p>
                         </div>
                         <Button
