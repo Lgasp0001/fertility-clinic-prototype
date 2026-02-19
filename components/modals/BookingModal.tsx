@@ -52,30 +52,30 @@ export default function BookingModal({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
-      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-berry/40 backdrop-blur-sm">
+      <div className="relative w-full max-w-lg bg-white rounded-2xl shadow-2xl animate-in fade-in zoom-in-95 duration-300 border border-white/20">
         {/* Close Button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors"
+          className="absolute top-4 right-4 p-2 hover:bg-rose/10 rounded-full transition-colors group"
         >
-          <X className="w-5 h-5 text-gray-500" />
+          <X className="w-5 h-5 text-gray-400 group-hover:text-rose" />
         </button>
 
         {!isSubmitted ? (
           <div className="p-8">
             <div className="text-center mb-6">
-              <h2 className="text-3xl font-bold text-navy mb-2">
-                Book Your Smile Consultation
+              <h2 className="text-3xl font-bold text-berry mb-2">
+                Book Your Private Consultation
               </h2>
               <p className="text-gray-600">
-                Take the first step towards your dream smile
+                Start your journey to building your dream family
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <Label htmlFor="name">Full Name</Label>
+                <Label htmlFor="name" className="text-berry/70">Full Name</Label>
                 <Input
                   id="name"
                   required
@@ -83,13 +83,13 @@ export default function BookingModal({
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  placeholder="John Doe"
-                  className="mt-1"
+                  placeholder="Your Name"
+                  className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20"
                 />
               </div>
 
               <div>
-                <Label htmlFor="email" className={!isEmailValid && formData.email !== '' ? 'text-red-500' : ''}>
+                <Label htmlFor="email" className={!isEmailValid && formData.email !== '' ? 'text-red-500' : 'text-berry/70'}>
                   Email Address
                 </Label>
                 <Input
@@ -100,19 +100,19 @@ export default function BookingModal({
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  placeholder="john@example.com"
-                  className={`mt-1 transition-colors ${!isEmailValid && formData.email !== ''
+                  placeholder="name@example.com"
+                  className={`mt-1 transition-colors border-gray-200 focus:border-rose focus:ring-rose/20 ${!isEmailValid && formData.email !== ''
                     ? 'border-red-500 focus-visible:ring-red-500'
                     : ''
                     }`}
                 />
                 {!isEmailValid && formData.email !== '' && (
-                  <p className="text-red-500 text-xs mt-1">Please include an '@' in the email address.</p>
+                  <p className="text-red-500 text-xs mt-1">Please include a valid email address.</p>
                 )}
               </div>
 
               <div>
-                <Label htmlFor="phone">Phone Number</Label>
+                <Label htmlFor="phone" className="text-berry/70">Phone Number</Label>
                 <Input
                   id="phone"
                   type="tel"
@@ -122,20 +122,20 @@ export default function BookingModal({
                     setFormData({ ...formData, phone: e.target.value })
                   }
                   placeholder="(512) 555-0123"
-                  className="mt-1"
+                  className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20"
                 />
               </div>
 
               <div>
-                <Label htmlFor="treatment">Treatment of Interest</Label>
+                <Label htmlFor="treatment" className="text-berry/70">Service of Interest</Label>
                 <Select
                   value={formData.treatment}
                   onValueChange={(value) =>
                     setFormData({ ...formData, treatment: value })
                   }
                 >
-                  <SelectTrigger className="mt-1">
-                    <SelectValue placeholder="Select a treatment" />
+                  <SelectTrigger className="mt-1 border-gray-200 focus:border-rose focus:ring-rose/20">
+                    <SelectValue placeholder="Select a service" />
                   </SelectTrigger>
                   <SelectContent>
                     {treatments.map((treatment) => (
@@ -149,51 +149,51 @@ export default function BookingModal({
 
               <Button
                 type="submit"
-                className={`w-full py-6 text-lg transition-all duration-300 font-bold ${isFormValid
-                  ? 'bg-teal hover:bg-teal-600 text-white shadow-lg shadow-teal/20 scale-[1.02]'
-                  : 'bg-teal/40 cursor-not-allowed text-white/90'
+                className={`w-full py-6 text-lg rounded-xl transition-all duration-300 font-bold ${isFormValid
+                  ? 'bg-rose hover:bg-rose-600 text-white shadow-lg shadow-rose/20 scale-[1.01]'
+                  : 'bg-rose/40 cursor-not-allowed text-white/90'
                   }`}
               >
                 Book My Consultation
               </Button>
 
-              <p className="text-xs text-gray-500 text-center">
-                By submitting this form, you agree to our Privacy Policy. We'll
+              <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest leading-relaxed">
+                By submitting, you agree to our Privacy Policy. We respect your confidentiality and will
                 contact you within 2 business hours.
               </p>
             </form>
           </div>
         ) : (
-          <div className="p-8 text-center">
-            <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-12 h-12 text-green-600" />
+          <div className="p-10 text-center">
+            <div className="w-20 h-20 bg-rose/10 rounded-full flex items-center justify-center mx-auto mb-6">
+              <CheckCircle className="w-12 h-12 text-rose" />
             </div>
 
-            <h2 className="text-3xl font-bold text-navy mb-4">
-              You're One Step Closer to Your New Smile!
+            <h2 className="text-3xl font-bold text-berry mb-4">
+              Your Journey Begins Now
             </h2>
 
-            <p className="text-gray-600 mb-4">
-              Thank you, {formData.name}! Our Smile Coordinator, Sarah, will
-              reach out via your preferred method within 2 business hours to
-              finalize your consultation time.
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Thank you, {formData.name}. Our Care Coordinator, Sarah, will
+              reach out discreetly within 2 business hours to
+              finalize your private consultation time.
             </p>
 
-            <div className="bg-teal-50 border border-teal-200 rounded-lg p-4 mb-6">
-              <p className="text-sm text-teal-900 font-medium">
-                While you wait, check your email for our "Frosts New Patient
-                Guide" which explains our pain-free technology and 0% finance
-                options in detail.
+            <div className="bg-rose/5 border border-rose/10 rounded-2xl p-5 mb-8">
+              <p className="text-sm text-berry/80 font-medium">
+                While you wait, check your email for our &ldquo;Path to Parenthood
+                Guide&rdquo; which explains our boutique approach and advance fertility
+                financing in detail.
               </p>
             </div>
 
-            <p className="text-gray-700 font-medium mb-6">
-              We can't wait to meet you!
+            <p className="text-berry font-semibold mb-8 italic">
+              We look forward to supporting you.
             </p>
 
             <Button
               onClick={handleClose}
-              className="bg-navy hover:bg-navy-700 text-white"
+              className="bg-berry hover:bg-berry-700 text-white px-10 py-5 rounded-xl font-bold transition-all shadow-lg"
             >
               Close
             </Button>

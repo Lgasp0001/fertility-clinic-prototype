@@ -31,10 +31,10 @@ export default function TreatmentPage() {
         <Header onBookingClick={() => setIsBookingModalOpen(true)} />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <h1 className="text-4xl font-bold text-navy mb-4">
-              Treatment Not Found
+            <h1 className="text-4xl font-bold text-berry mb-4">
+              Service Not Found
             </h1>
-            <Button onClick={() => router.push('/')}>Return Home</Button>
+            <Button onClick={() => router.push('/')} className="bg-berry hover:bg-berry/90 text-white">Return Home</Button>
           </div>
         </div>
         <Footer />
@@ -73,11 +73,11 @@ export default function TreatmentPage() {
                 <Button
                   onClick={() => setIsBookingModalOpen(true)}
                   size="lg"
-                  className="bg-teal hover:bg-teal-600 text-white"
+                  className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
                 >
-                  Book My Smile Consultation
+                  Book My Private Consultation
                 </Button>
-                <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-lg">
+                <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
                   <div className="text-sm text-gray-300">Starting from</div>
                   <div className="text-2xl font-bold text-white">
                     {treatment.priceStarting}
@@ -97,8 +97,8 @@ export default function TreatmentPage() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold text-navy mb-6">
-                About This Treatment
+              <h2 className="text-3xl font-bold text-berry mb-6 tracking-tight">
+                About This Service
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-8">
                 {treatment.fullDescription}
@@ -106,32 +106,32 @@ export default function TreatmentPage() {
 
               {/* Quick Facts */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-                <Card>
+                <Card className="border-rose/10 bg-rose/5">
                   <CardContent className="p-6">
-                    <Clock className="w-8 h-8 text-teal mb-3" />
-                    <div className="font-semibold text-navy mb-1">Duration</div>
+                    <Clock className="w-8 h-8 text-rose mb-3" />
+                    <div className="font-semibold text-berry mb-1 uppercase text-xs tracking-widest">Duration</div>
                     <div className="text-gray-600">{treatment.duration}</div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-rose/10 bg-rose/5">
                   <CardContent className="p-6">
-                    <Heart className="w-8 h-8 text-teal mb-3" />
-                    <div className="font-semibold text-navy mb-1">Recovery</div>
+                    <Heart className="w-8 h-8 text-rose mb-3" />
+                    <div className="font-semibold text-berry mb-1 uppercase text-xs tracking-widest">Journey</div>
                     <div className="text-gray-600">{treatment.recovery}</div>
                   </CardContent>
                 </Card>
-                <Card>
+                <Card className="border-rose/10 bg-rose/5">
                   <CardContent className="p-6">
-                    <Calendar className="w-8 h-8 text-teal mb-3" />
-                    <div className="font-semibold text-navy mb-1">Price</div>
+                    <Calendar className="w-8 h-8 text-rose mb-3" />
+                    <div className="font-semibold text-berry mb-1 uppercase text-xs tracking-widest">Fees</div>
                     <div className="text-gray-600">{treatment.priceRange}</div>
                   </CardContent>
                 </Card>
               </div>
 
               {/* Benefits */}
-              <h2 className="text-3xl font-bold text-navy mb-6">
-                Benefits
+              <h2 className="text-3xl font-bold text-berry mb-6">
+                Key Benefits
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
                 {treatment.benefits.map((benefit, index) => (
@@ -143,15 +143,15 @@ export default function TreatmentPage() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="flex items-start space-x-3"
                   >
-                    <Check className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                    <Check className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
                     <span className="text-gray-700">{benefit}</span>
                   </motion.div>
                 ))}
               </div>
 
               {/* How It Works */}
-              <h2 className="text-3xl font-bold text-navy mb-6">
-                How It Works
+              <h2 className="text-3xl font-bold text-berry mb-6">
+                Your Care Pathway
               </h2>
               <div className="space-y-4 mb-12">
                 {treatment.howItWorks.map((step, index) => (
@@ -163,7 +163,7 @@ export default function TreatmentPage() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     className="flex items-start space-x-4"
                   >
-                    <div className="flex-shrink-0 w-8 h-8 bg-teal rounded-full flex items-center justify-center text-white font-bold">
+                    <div className="flex-shrink-0 w-8 h-8 bg-berry rounded-full flex items-center justify-center text-white font-bold">
                       {index + 1}
                     </div>
                     <p className="text-gray-700 pt-1">{step}</p>
@@ -178,8 +178,8 @@ export default function TreatmentPage() {
         {testimonials.length > 0 && (
           <section className="py-16 bg-gray-50">
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl font-bold text-navy mb-8 text-center">
-                What Our Patients Say
+              <h2 className="text-3xl font-bold text-berry mb-8 text-center tracking-tight">
+                Authentic Success Stories
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {testimonials.map((testimonial, index) => (
@@ -190,21 +190,21 @@ export default function TreatmentPage() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                   >
-                    <Card className="h-full">
+                    <Card className="h-full border-rose/10">
                       <CardContent className="p-6">
-                        <Quote className="w-8 h-8 text-teal-100 mb-4" />
+                        <Quote className="w-8 h-8 text-rose/10 mb-4" />
                         <div className="flex mb-3">
                           {[...Array(5)].map((_, i) => (
                             <Star
                               key={i}
-                              className="w-4 h-4 text-gold fill-gold"
+                              className="w-4 h-4 text-rose fill-rose"
                             />
                           ))}
                         </div>
                         <p className="text-gray-700 mb-4 italic">
-                          "{testimonial.text}"
+                          &ldquo;{testimonial.text}&rdquo;
                         </p>
-                        <p className="font-semibold text-navy">
+                        <p className="font-semibold text-berry">
                           {testimonial.name}
                         </p>
                       </CardContent>
@@ -217,30 +217,30 @@ export default function TreatmentPage() {
         )}
 
         {/* CTA Section */}
-        <section className="py-16 bg-navy">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <section className="py-16 bg-berry">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Get Started?
+              <h2 className="text-4xl font-bold mb-4 tracking-tight">
+                Ready to Start Your Journey?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                Book your free consultation and take the first step towards your
-                dream smile.
+                Book your private consultation and take the first step towards
+                your dream family.
               </p>
               <Button
                 onClick={() => setIsBookingModalOpen(true)}
                 size="lg"
-                className="bg-teal hover:bg-teal-600 text-white"
+                className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
               >
                 Book My Free Consultation
               </Button>
               <p className="text-sm text-gray-400 mt-4">
-                0% finance available • Same-day appointments • No obligation
+                Specialized financing available • Private boutique studio • Dedicated care team
               </p>
             </motion.div>
           </div>

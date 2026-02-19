@@ -8,51 +8,51 @@ export interface FAQ {
 export const faqs: FAQ[] = [
   {
     id: '1',
-    question: 'Will my dental treatment hurt?',
-    answer: 'We prioritize your comfort above all else. We use "The Wand" - a computer-controlled anesthesia system that delivers numbing medication so gently, most patients don\'t even feel the injection. For anxious patients, we also offer optional sedation dentistry. The vast majority of our patients describe their experience as completely pain-free and far better than they expected.',
-    category: 'pain'
+    question: 'How do I start my fertility journey at Frosts?',
+    answer: 'The first step is a comprehensive fertility consultation in our South Congress studio. We’ll discuss your goals, medical history, and conduct initial diagnostics in a comfortable, boutique environment. You can book your first visit directly through our website or by calling our care coordinators.',
+    category: 'process'
   },
   {
     id: '2',
-    question: 'How much will my treatment cost?',
-    answer: 'We believe everyone deserves a confident smile, which is why we offer flexible payment options to fit any budget. We provide 0% interest financing for up to 12 months on treatments over $500. For example, you can begin your Invisalign journey for as little as $28 per month. We\'ll provide a detailed cost breakdown during your free consultation, with no hidden fees or surprises.',
+    question: 'How much does IVF or egg freezing cost?',
+    answer: 'Transparency is key to our care. A standard IVF cycle or egg freezing package has a clear base price, which we will discuss during your consultation. We also offer flexible financing plans through partners like CareCredit and LendingClub, with monthly payments starting as low as $45/mo for certain preservation plans.',
     category: 'cost'
   },
   {
     id: '3',
-    question: 'How many appointments will I need?',
-    answer: 'It depends on your treatment, but we maximize efficiency wherever possible. Many procedures like composite bonding and teeth whitening can be completed in a single visit. For treatments requiring multiple appointments, we offer extended hours including late evenings and Saturdays to accommodate your schedule. We also provide remote monitoring for aligner treatments to minimize in-office visits.',
+    question: 'How long does a typical IVF cycle take?',
+    answer: 'A standard IVF cycle typically takes about 4 to 6 weeks from the start of medication to the embryo transfer. However, every journey is unique. Our specialists provide a personalized timeline during your consultation so you know exactly what to expect at every stage.',
     category: 'time'
   },
   {
     id: '4',
-    question: 'What if I\'m not happy with the results?',
-    answer: 'Your satisfaction is our guarantee. We use Digital Smile Design technology so you can preview your results before we ever begin treatment. For teeth whitening, we offer our Frosts Promise: if you\'re not thrilled with your results within 14 days, we\'ll provide a complimentary clinical top-up treatment at no charge. We stand behind the quality of our work 100%.',
-    category: 'guarantee'
+    question: 'What is the boutique experience at Frosts?',
+    answer: 'We’ve designed Frosts to be the opposite of a cold, clinical hospital. Our studio features private recovery suites, organic refreshments, and a team that knows you by name. We combine world-class reproductive technology with a nurturing environment that prioritizes your emotional well-being.',
+    category: 'experience'
   },
   {
     id: '5',
-    question: 'Do you accept dental insurance?',
-    answer: 'Yes, we work with most major dental insurance providers and will help you maximize your benefits. Our team will verify your coverage before treatment and handle all the paperwork on your behalf. For treatments not covered by insurance, we offer our Frosts Membership plan at just $20/month, which includes 2 checkups, 2 cleanings per year, and 10% off all additional treatments.',
-    category: 'insurance'
+    question: 'Do you offer genetic testing for embryos?',
+    answer: 'Yes, we provide advanced PGT-A and PGT-M genetic screening. This technology allows us to select the healthiest embryos, which can significantly increase success rates and reduce the risk of chromosomal abnormalities.',
+    category: 'tech'
   },
   {
     id: '6',
-    question: 'How long will my results last?',
-    answer: 'With proper care, most of our treatments deliver long-lasting or even permanent results. Dental implants can last a lifetime, porcelain veneers typically last 10-15 years, and teeth whitening results last 1-3 years depending on your habits. We provide detailed aftercare instructions and maintenance plans to help you protect your investment and enjoy your beautiful smile for years to come.',
-    category: 'longevity'
+    question: 'What are your success rates?',
+    answer: 'While success rates depend on individual factors like age and medical history, Frosts maintains success rates that are consistently above the national average. We are proud members of ASRM and SART, and we report our outcomes transparently to ensure you have the best information possible.',
+    category: 'success'
   },
   {
     id: '7',
-    question: 'I haven\'t been to the dentist in years. Will you judge me?',
-    answer: 'Absolutely not. We understand that dental anxiety and life circumstances can prevent people from seeking care. Our compassionate team creates a judgment-free environment where you\'ll feel welcomed and supported, no matter how long it\'s been. We\'ll work with you to develop a comfortable treatment plan at your own pace, focusing on your immediate concerns and long-term oral health goals.',
-    category: 'anxiety'
+    question: 'Do you offer holistic support like acupuncture?',
+    answer: 'Absolutely. We believe in total-body health. Our "Frosts Holistic" program integrates acupuncture, nutrition counseling, and stress-reduction techniques specifically designed to support fertility treatments and improve outcomes.',
+    category: 'holistic'
   },
   {
     id: '8',
-    question: 'Can I see what my smile will look like before committing?',
-    answer: 'Yes! We use advanced Digital Smile Design technology that creates a 3D preview of your results before treatment begins. For orthodontics, you\'ll see your predicted outcome at every stage of treatment. This ensures you\'re completely confident in your treatment plan and excited about your transformation. No surprises - only beautiful, predictable results.',
-    category: 'visualization'
+    question: 'Is my privacy protected?',
+    answer: 'Your privacy is our highest priority. From our discreet South Congress location to our secure patient portal, every aspect of your care is handled with the utmost confidentiality. We strictly adhere to HIPAA guidelines and beyond.',
+    category: 'privacy'
   }
 ];
 

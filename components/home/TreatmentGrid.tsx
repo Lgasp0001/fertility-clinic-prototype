@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import {
   Activity,
-  Smile,
   Sparkles,
   Sun,
   Shield,
@@ -16,9 +15,8 @@ import { treatments } from '@/lib/data/treatments';
 import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
-const iconMap: { [key: string]: any } = {
+const iconMap: { [key: string]: React.ElementType } = {
   Activity,
-  Smile,
   Sparkles,
   Sun,
   Shield,
@@ -38,18 +36,18 @@ export default function TreatmentGrid() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Our Treatments
+          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
+            Specialized Care
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            From routine care to complete smile transformations, we offer
-            comprehensive dental solutions tailored to your unique needs.
+            From initial consultations to advanced reproductive technology, we offer
+            comprehensive fertility solutions tailored to your unique journey.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {treatments.map((treatment, index) => {
-            const Icon = iconMap[treatment.icon];
+            const Icon = iconMap[treatment.icon] || Heart;
             return (
               <motion.div
                 key={treatment.id}
@@ -62,10 +60,10 @@ export default function TreatmentGrid() {
               >
                 <Card className="h-full premium-glass shine-effect glass-glow border-white/20 hover:shadow-glass-hover transition-all duration-300 group cursor-pointer">
                   <CardHeader>
-                    <div className="w-14 h-14 bg-gradient-to-br from-teal to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <div className="w-14 h-14 bg-gradient-to-br from-rose to-rose-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
                       <Icon className="w-7 h-7 text-white" />
                     </div>
-                    <CardTitle className="text-xl text-navy">
+                    <CardTitle className="text-xl text-berry">
                       {treatment.name}
                     </CardTitle>
                   </CardHeader>
@@ -75,7 +73,7 @@ export default function TreatmentGrid() {
                     </CardDescription>
                     <div className="mt-4 flex items-baseline justify-between">
                       <span className="text-sm text-gray-500">From</span>
-                      <span className="text-lg font-bold text-teal">
+                      <span className="text-lg font-bold text-rose">
                         {treatment.priceStarting}
                       </span>
                     </div>
@@ -84,7 +82,7 @@ export default function TreatmentGrid() {
                     <Link href={`/treatments/${treatment.slug}`} className="w-full">
                       <Button
                         variant="ghost"
-                        className="w-full border border-teal text-teal hover:bg-teal hover:text-white transition-colors"
+                        className="w-full border border-rose text-rose hover:bg-rose hover:text-white transition-colors"
                       >
                         Learn More
                       </Button>
@@ -104,14 +102,14 @@ export default function TreatmentGrid() {
           className="text-center mt-12"
         >
           <p className="text-gray-600 mb-4">
-            Not sure which treatment is right for you?
+            Not sure where to start your journey?
           </p>
           <Link href="#quiz">
             <Button
               variant="outline"
-              className="border-navy text-navy hover:bg-navy hover:text-white"
+              className="border-berry text-berry hover:bg-berry hover:text-white"
             >
-              Take Our Smile Assessment
+              Take Our Fertility Assessment
             </Button>
           </Link>
         </motion.div>

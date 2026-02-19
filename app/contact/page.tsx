@@ -46,24 +46,24 @@ export default function ContactPage() {
 
   const contactFAQs = [
     {
-      question: 'What are your office hours?',
+      question: 'What are your clinic hours?',
       answer:
-        'We are open Monday to Friday from 8:00 AM to 7:00 PM, and Saturdays from 9:00 AM to 4:00 PM. We are closed on Sundays. We offer late evening appointments for your convenience.',
+        'We are open Monday to Friday from 8:00 AM to 7:00 PM, and Saturdays from 9:00 AM to 4:00 PM. We are closed on Sundays. We offer flexible appointment times to fit your schedule.',
     },
     {
-      question: 'Do you accept dental insurance?',
+      question: 'Do you offer fertility financing?',
       answer:
-        'Yes, we work with most major dental insurance providers. Our team will verify your coverage and help you understand your benefits before treatment. We will also handle all the paperwork on your behalf.',
+        'Yes, we provide several flexible financing options for our pathways, including preservation and IVF packages. Our care coordinators can help you find a plan that works for you.',
     },
     {
-      question: 'How quickly can I get an appointment?',
+      question: 'How quickly can I get an initial consultation?',
       answer:
-        'We offer same-day appointments for emergencies. For routine consultations, we typically have availability within 48 hours. Contact us to check current availability.',
+        'We typically have availability for initial private consultations within 48 to 72 hours. Please contact us or use our online booking tool to check specific times.',
     },
     {
-      question: 'Do you offer emergency dental services?',
+      question: 'Is my information kept confidential?',
       answer:
-        'Yes, we prioritize dental emergencies. If you call before 10 AM with a dental emergency, we will do our best to see you the same day. We understand that dental pain cannot wait.',
+        'Absolutely. Privacy and discretion are at the heart of our boutique approach. All your data and conversations are strictly confidential and protected by the highest medical standards.',
     },
   ];
 
@@ -92,7 +92,7 @@ export default function ContactPage() {
                 Get In Touch
               </h1>
               <p className="text-2xl text-gray-200">
-                Have questions? We're here to help. Reach out to our friendly
+                Have questions? We&apos;re here to help. Reach out to our friendly
                 team today.
               </p>
             </motion.div>
@@ -110,15 +110,15 @@ export default function ContactPage() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <h2 className="text-3xl font-bold text-navy mb-6">
-                  Visit Our Practice
+                <h2 className="text-3xl font-bold text-berry mb-6 tracking-tight">
+                  Visit Our Clinic
                 </h2>
 
                 <div className="space-y-6 mb-8">
                   <div className="flex items-start space-x-4">
-                    <MapPin className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                    <MapPin className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Address</h3>
+                      <h3 className="font-semibold text-berry mb-1">Address</h3>
                       <p className="text-gray-600">
                         2847 Willow Creek Drive
                         <br />
@@ -128,12 +128,12 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Phone className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                    <Phone className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Phone</h3>
+                      <h3 className="font-semibold text-berry mb-1">Phone</h3>
                       <a
                         href="tel:5125550198"
-                        className="text-teal hover:underline"
+                        className="text-berry hover:text-rose transition-colors"
                       >
                         (512) 555-0198
                       </a>
@@ -141,23 +141,23 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Mail className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                    <Mail className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">Email</h3>
+                      <h3 className="font-semibold text-berry mb-1">Email</h3>
                       <a
-                        href="mailto:hello@frostsdental.com"
-                        className="text-teal hover:underline"
+                        href="mailto:hello@frostsfertility.com"
+                        className="text-berry hover:text-rose transition-colors"
                       >
-                        hello@frostsdental.com
+                        hello@frostsfertility.com
                       </a>
                     </div>
                   </div>
 
                   <div className="flex items-start space-x-4">
-                    <Clock className="w-6 h-6 text-teal flex-shrink-0 mt-1" />
+                    <Clock className="w-6 h-6 text-rose flex-shrink-0 mt-1" />
                     <div>
-                      <h3 className="font-semibold text-navy mb-1">
-                        Office Hours
+                      <h3 className="font-semibold text-berry mb-1">
+                        Clinic Hours
                       </h3>
                       <div className="text-gray-600">
                         <p>Monday - Friday: 8:00 AM - 7:00 PM</p>
@@ -169,20 +169,20 @@ export default function ContactPage() {
                 </div>
 
                 {/* Emergency Notice */}
-                <Card className="bg-teal-50 border-teal-200">
+                <Card className="bg-rose/5 border-rose/20">
                   <CardContent className="p-6">
-                    <h3 className="font-semibold text-teal-900 mb-2">
-                      Dental Emergency?
+                    <h3 className="font-semibold text-berry mb-2">
+                      Need Immediate Care?
                     </h3>
-                    <p className="text-teal-800 mb-4">
-                      We prioritize emergencies. Call us before 10 AM for
-                      same-day relief.
+                    <p className="text-gray-600 mb-4">
+                      We prioritize urgent consultations. Call us before 10 AM for
+                      priority scheduling.
                     </p>
                     <a
                       href="tel:5125550198"
-                      className="inline-flex items-center space-x-2 font-semibold text-teal-900 hover:text-teal-700"
+                      className="inline-flex items-center space-x-2 font-semibold text-berry hover:text-rose transition-colors"
                     >
-                      <Phone className="w-5 h-5" />
+                      <Phone className="w-5 h-5 text-rose" />
                       <span>(512) 555-0198</span>
                     </a>
                   </CardContent>
@@ -199,7 +199,7 @@ export default function ContactPage() {
                 {!isSubmitted ? (
                   <Card>
                     <CardContent className="p-8">
-                      <h2 className="text-2xl font-bold text-navy mb-6">
+                      <h2 className="text-2xl font-bold text-berry mb-6">
                         Send Us a Message
                       </h2>
 
@@ -245,7 +245,7 @@ export default function ContactPage() {
                                   }`}
                               />
                               {!isEmailValid && formData.email !== '' && (
-                                <p className="text-red-500 text-xs mt-1">Please include an '@' in the email address.</p>
+                                <p className="text-red-500 text-xs mt-1">Please include an &apos;@&apos; in the email address.</p>
                               )}
                             </div>
 
@@ -288,15 +288,15 @@ export default function ContactPage() {
                             <Button
                               type="submit"
                               className={`w-full py-6 text-lg transition-all duration-300 font-bold ${isFormValid
-                                ? 'bg-teal hover:bg-teal-600 text-white shadow-lg shadow-teal/20 scale-[1.02]'
-                                : 'bg-teal/40 cursor-not-allowed text-white/90'
+                                ? 'bg-rose hover:bg-rose-600 text-white shadow-lg shadow-rose/20 scale-[1.02]'
+                                : 'bg-rose/40 cursor-not-allowed text-white/90'
                                 }`}
                             >
                               Send Message
                             </Button>
 
                             <p className="text-xs text-gray-500 text-center">
-                              We'll get back to you within 2 business hours.
+                              We&apos;ll get back to you within 2 business hours.
                             </p>
                           </form>
                         );
@@ -310,7 +310,7 @@ export default function ContactPage() {
                         <CheckCircle className="w-12 h-12 text-green-600" />
                       </div>
 
-                      <h2 className="text-3xl font-bold text-navy mb-4">
+                      <h2 className="text-3xl font-bold text-berry mb-4">
                         Message Sent Successfully!
                       </h2>
 
@@ -349,7 +349,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl font-bold text-navy mb-4">
+              <h2 className="text-3xl font-bold text-berry mb-4">
                 Frequently Asked Questions
               </h2>
               <p className="text-gray-600">
@@ -364,8 +364,8 @@ export default function ContactPage() {
                   value={`item-${index}`}
                   className="bg-gray-50 rounded-lg px-6"
                 >
-                  <AccordionTrigger className="text-left hover:text-teal">
-                    <span className="font-semibold text-navy">
+                  <AccordionTrigger className="text-left hover:text-rose transition-colors">
+                    <span className="font-semibold text-berry">
                       {faq.question}
                     </span>
                   </AccordionTrigger>
@@ -379,7 +379,7 @@ export default function ContactPage() {
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 bg-navy">
+        <section className="py-16 bg-berry">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -388,16 +388,16 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-4xl font-bold text-white mb-4">
-                Ready to Transform Your Smile?
+                Ready to Start Your Journey?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Book your free consultation and discover how we can help you
-                achieve the smile you've always wanted.
+                achieve your dreams of parenthood.
               </p>
               <Button
                 onClick={() => setIsBookingModalOpen(true)}
                 size="lg"
-                className="bg-teal hover:bg-teal-600 text-white"
+                className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
               >
                 Book My Free Consultation
               </Button>

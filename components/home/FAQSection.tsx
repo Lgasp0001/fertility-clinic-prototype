@@ -25,11 +25,11 @@ export default function FAQSection({ onBookingClick }: FAQSectionProps) {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Your Questions, Answered
+          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
+            Common Fertility Questions
           </h2>
           <p className="text-xl text-gray-600">
-            We understand you may have concerns. Here's what our patients commonly ask.
+            We understand you may have concerns. Here’s what our patients commonly ask about their path to parenthood.
           </p>
         </motion.div>
 
@@ -46,8 +46,8 @@ export default function FAQSection({ onBookingClick }: FAQSectionProps) {
                 value={faq.id}
                 className="bg-white rounded-lg shadow-sm border border-gray-200 px-6"
               >
-                <AccordionTrigger className="text-left hover:text-teal">
-                  <span className="font-semibold text-navy">{faq.question}</span>
+                <AccordionTrigger className="text-left hover:text-rose decoration-rose/30">
+                  <span className="font-semibold text-berry">{faq.question}</span>
                 </AccordionTrigger>
                 <AccordionContent className="text-gray-600 leading-relaxed">
                   {faq.answer}
@@ -65,14 +65,14 @@ export default function FAQSection({ onBookingClick }: FAQSectionProps) {
           className="text-center mt-12"
         >
           <p className="text-gray-600 mb-4">
-            Still have questions? We're here to help.
+            Still have questions? We’re here to help.
           </p>
           <Button
             onClick={onBookingClick}
             size="lg"
-            className="bg-teal hover:bg-teal-600 text-white"
+            className="bg-rose hover:bg-rose-600 text-white px-8 py-6 rounded-xl text-lg font-bold transition-all"
           >
-            Start a Conversation
+            Start Your Journey
           </Button>
         </motion.div>
       </div>

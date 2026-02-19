@@ -22,7 +22,7 @@ export default function TestimonialCarousel() {
     );
   };
 
-  const handleDragEnd = (_: any, info: any) => {
+  const handleDragEnd = (_: unknown, info: { offset: { x: number } }) => {
     if (info.offset.x > 100) {
       prevTestimonial();
     } else if (info.offset.x < -100) {
@@ -40,19 +40,18 @@ export default function TestimonialCarousel() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Real Patient Transformations
+          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
+            Real Success Stories
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Don't just take our word for it - hear from our delighted patients
-            who have transformed their smiles and their lives.
+            Experience the journey through the eyes of the families whose lives have been transformed by our boutique fertility care.
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <Card className="relative overflow-hidden shadow-2xl border-none bg-gray-50/50 backdrop-blur-sm">
             <CardContent className="p-8 md:p-12">
-              <Quote className="absolute top-8 left-8 w-16 h-16 text-teal/10" />
+              <Quote className="absolute top-8 left-8 w-16 h-16 text-rose/10" />
 
               <motion.div
                 key={currentIndex}
@@ -69,20 +68,20 @@ export default function TestimonialCarousel() {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="w-6 h-6 text-gold fill-gold"
+                      className="w-6 h-6 text-rose fill-rose"
                     />
                   ))}
                 </div>
 
-                <blockquote className="text-xl md:text-3xl text-navy text-center mb-8 leading-relaxed font-medium italic">
-                  "{currentTestimonial.text}"
+                <blockquote className="text-xl md:text-3xl text-berry text-center mb-8 leading-relaxed font-medium italic">
+                  &ldquo;{currentTestimonial.text}&rdquo;
                 </blockquote>
 
                 <div className="text-center">
-                  <p className="font-bold text-navy text-xl mb-1">
+                  <p className="font-bold text-berry text-xl mb-1">
                     {currentTestimonial.name}
                   </p>
-                  <p className="text-teal font-semibold tracking-wide uppercase text-sm">
+                  <p className="text-rose font-semibold tracking-wide uppercase text-sm">
                     {currentTestimonial.treatment}
                   </p>
                 </div>
@@ -119,8 +118,8 @@ export default function TestimonialCarousel() {
                 key={index}
                 onClick={() => setCurrentIndex(index)}
                 className={`h-2.5 rounded-full transition-all duration-300 ${index === currentIndex
-                    ? 'bg-teal w-10'
-                    : 'bg-gray-300 hover:bg-gray-400 w-2.5'
+                  ? 'bg-rose w-10'
+                  : 'bg-gray-300 hover:bg-gray-400 w-2.5'
                   }`}
                 aria-label={`Go to testimonial ${index + 1}`}
               />

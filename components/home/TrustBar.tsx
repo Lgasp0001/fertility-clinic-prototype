@@ -7,19 +7,19 @@ export default function TrustBar() {
   const trustItems = [
     {
       icon: Shield,
-      text: 'ADA Accredited',
+      text: 'ASRM Member',
     },
     {
       icon: Award,
-      text: 'Invisalign Diamond',
+      text: 'TFS Certified',
     },
     {
       icon: Star,
-      text: '4.5/5 Google Rating',
+      text: '4.9/5 GCR Rating',
     },
     {
       icon: Users,
-      text: '15+ Years Experience',
+      text: '20+ Years Experience',
     },
   ];
 
@@ -42,10 +42,10 @@ export default function TrustBar() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex flex-col items-center text-center group"
             >
-              <div className="w-16 h-16 mb-3 bg-teal-50 rounded-full flex items-center justify-center group-hover:bg-teal-100 transition-colors">
-                <item.icon className="w-8 h-8 text-teal group-hover:scale-110 transition-transform" />
+              <div className="w-16 h-16 mb-3 bg-rose-50 rounded-full flex items-center justify-center group-hover:bg-rose-100 transition-colors">
+                <item.icon className="w-8 h-8 text-rose group-hover:scale-110 transition-transform" />
               </div>
-              <p className="text-sm font-semibold text-navy">{item.text}</p>
+              <p className="text-sm font-semibold text-berry">{item.text}</p>
             </motion.div>
           ))}
         </motion.div>

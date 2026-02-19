@@ -15,7 +15,7 @@ import TrustNumbers from '@/components/home/TrustNumbers';
 import TestimonialCarousel from '@/components/home/TestimonialCarousel';
 import PricingSection from '@/components/home/PricingSection';
 import FAQSection from '@/components/home/FAQSection';
-import SmileQuiz from '@/components/home/SmileQuiz';
+import AssessmentQuiz from '@/components/home/SmileQuiz';
 import LeadCapture from '@/components/home/LeadCapture';
 import BookingModal from '@/components/modals/BookingModal';
 
@@ -36,7 +36,7 @@ export default function Home() {
         <TestimonialCarousel />
         <PricingSection onBookingClick={() => setIsBookingModalOpen(true)} />
         <FAQSection onBookingClick={() => setIsBookingModalOpen(true)} />
-        <SmileQuiz />
+        <AssessmentQuiz />
         <LeadCapture onBookingClick={() => setIsBookingModalOpen(true)} />
       </main>
       <Footer />

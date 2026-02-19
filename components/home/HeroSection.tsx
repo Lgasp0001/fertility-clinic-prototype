@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, Variants } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ChevronDown, MapPin, Star } from 'lucide-react';
 
@@ -10,18 +11,13 @@ interface HeroSectionProps {
   onBookingClick: () => void;
 }
 
-const wordVariants: Variants = {
+const wordVariants = {
   hidden: { opacity: 0, y: 20, filter: 'blur(10px)' },
-  visible: (i: number) => ({
+  visible: {
     opacity: 1,
     y: 0,
     filter: 'blur(0px)',
-    transition: {
-      delay: i * 0.1,
-      duration: 0.8,
-      ease: [0.22, 1, 0.36, 1], // easeOutExpo
-    },
-  }),
+  },
 };
 
 export default function HeroSection({ onBookingClick }: HeroSectionProps) {
@@ -32,7 +28,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
     }
   };
 
-  const titleWords = "Frosts Dental Practice".split(" ");
+  const titleWords = "Frosts Fertility Clinic".split(" ");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-gradient">
@@ -58,17 +54,17 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
           >
             <span className="flex">
               {[...Array(4)].map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-gold fill-gold" />
+                <Star key={i} className="w-4 h-4 text-rose fill-rose" />
               ))}
               <div className="relative">
-                <Star className="w-4 h-4 text-gold" />
+                <Star className="w-4 h-4 text-rose" />
                 <div className="absolute inset-0 overflow-hidden w-1/2">
-                  <Star className="w-4 h-4 text-gold fill-gold" />
+                  <Star className="w-4 h-4 text-rose fill-rose" />
                 </div>
               </div>
             </span>
             <span className="text-white text-sm font-medium tracking-wide uppercase">
-              One of Austin's most highly rated Patient Experiences
+              One of Austin&apos;s most compassionate Fertility Experiences
             </span>
           </motion.div>
 
@@ -81,8 +77,11 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
               <motion.span
                 key={i}
                 variants={wordVariants}
-                custom={i}
-                className={word === "Practice" ? "text-teal" : ""}
+                transition={{
+                  delay: i * 0.1,
+                  duration: 0.8,
+                }}
+                className={word === "Clinic" ? "text-rose" : ""}
               >
                 {word}
               </motion.span>
@@ -95,7 +94,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 0.8 }}
             className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto leading-relaxed text-balance"
           >
-            Escape the clinical cold. Experience world-class artistry and gentle precision in our boutique South Congress studio, designed for your ultimate comfort.
+            Escape the clinical cold. Experience world-class care and gentle precision in our boutique South Congress studio, designed for your ultimate comfort.
           </motion.p>
 
           <motion.div
@@ -109,9 +108,9 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
                 <Button
                   onClick={onBookingClick}
                   size="lg"
-                  className="bg-teal hover:bg-teal-600 text-white text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-teal/20 transition-all font-semibold"
+                  className="bg-rose hover:bg-rose-600 text-white text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-rose/20 transition-all font-semibold"
                 >
-                  Start Your Smile Journey
+                  Start Your Journey
                 </Button>
               </motion.div>
             </Magnetic>
@@ -123,7 +122,7 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
                   variant="outline"
                   className="bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all"
                 >
-                  Explore Our Treatments
+                  Explore Our Services
                 </Button>
               </motion.div>
             </Magnetic>
@@ -136,8 +135,8 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             className="mt-12 flex flex-col items-center"
           >
             <div className="flex items-center space-x-2 text-gray-300">
-              <MapPin className="w-4 h-4 text-teal" />
-              <p className="text-sm font-medium tracking-wide uppercase">Downtown Austin & Westlake Studios • Open Late & Saturdays</p>
+              <MapPin className="w-4 h-4 text-rose" />
+              <p className="text-sm font-medium tracking-wide uppercase">Downtown Austin &amp; Westlake Studios • Compassionate Consultation</p>
             </div>
           </motion.div>
         </div>

@@ -20,17 +20,17 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-4">
-            Flexible Payment Options
+          <h2 className="text-4xl md:text-5xl font-bold text-berry mb-4">
+            Investing in Your Future
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Quality dental care shouldn't break the bank. We offer financing
-            solutions to make your dream smile affordable.
+            World-class fertility care should be accessible. We offer flexible
+            financing solutions to make your dream of building a family a reality.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          {/* Membership Plan */}
+          {/* Preservation Plan */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,52 +39,52 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
             whileTap={{ scale: 0.98 }}
             className="active-reveal"
           >
-            <Card className="h-full border-2 border-teal shadow-lg hover:shadow-xl transition-shadow premium-glass glass-glow shine-effect cursor-pointer">
+            <Card className="h-full border-2 border-rose/30 shadow-lg hover:shadow-xl transition-shadow premium-glass glass-glow shine-effect cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-teal rounded-full flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-rose rounded-full flex items-center justify-center mb-4">
                   <Check className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-navy">
-                  Frosts Membership
+                <CardTitle className="text-2xl text-berry">
+                  Frosts Preservation
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  Preventive care made simple
+                  Empower your future self
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="mb-6">
-                  <span className="text-5xl font-bold text-navy">$20</span>
+                  <span className="text-5xl font-bold text-berry">$45</span>
                   <span className="text-gray-500">/month</span>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-teal mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-rose mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      2 comprehensive checkups per year
+                      Personalized egg freezing roadmap
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-teal mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-rose mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      2 professional cleanings per year
+                      Comprehensive hormone screening
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-teal mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-rose mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      10% discount on all treatments
+                      1 year of cryopreservation included
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-teal mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-rose mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Priority appointment booking
+                      Boutique studio recovery suite
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-teal mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-rose mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Emergency dental support
+                      Emotional support & counseling
                     </span>
                   </li>
                 </ul>
@@ -93,69 +93,69 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
                 <Button
                   onClick={onBookingClick}
                   size="lg"
-                  className="w-full bg-teal hover:bg-teal-600 text-white"
+                  className="w-full bg-rose hover:bg-rose-600 text-white"
                 >
-                  Start a Conversation
+                  Start Your Journey
                 </Button>
               </CardFooter>
             </Card>
           </motion.div>
 
-          {/* 0% Finance */}
+          {/* IVF Finance */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             whileTap={{ scale: 0.98 }}
-            className="active-reveal focus-within:ring-2 focus-within:ring-gold"
+            className="active-reveal"
           >
-            <Card className="h-full border-2 border-gold shadow-lg hover:shadow-xl transition-shadow premium-glass gold-glass-glow shine-effect cursor-pointer">
+            <Card className="h-full border-2 border-berry/30 shadow-lg hover:shadow-xl transition-shadow premium-glass berry-glass-glow shine-effect cursor-pointer">
               <CardHeader>
-                <div className="w-12 h-12 bg-gold rounded-full flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-berry rounded-full flex items-center justify-center mb-4">
                   <CreditCard className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-navy">
-                  0% Finance Available
+                <CardTitle className="text-2xl text-berry">
+                  IVF Financing
                 </CardTitle>
                 <CardDescription className="text-lg">
-                  Spread the cost, keep the smile
+                  Clear paths to parenthood
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="mb-6">
-                  <span className="text-5xl font-bold text-navy">$28</span>
+                  <span className="text-5xl font-bold text-berry">$199</span>
                   <span className="text-gray-500">/month</span>
                 </div>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-berry mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
                       0% interest for up to 12 months
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-berry mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Available on treatments over $500
+                      Packages starting under $10k
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-berry mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Quick and easy approval process
+                      Quick and discreet approval
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-berry mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Flexible repayment options
+                      Flexible multi-cycle options
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <Check className="w-5 h-5 text-gold mr-2 flex-shrink-0 mt-0.5" />
+                    <Check className="w-5 h-5 text-berry mr-2 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">
-                      Start your treatment immediately
+                      Dedicated financial coordinator
                     </span>
                   </li>
                 </ul>
@@ -164,9 +164,9 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
                 <Button
                   onClick={onBookingClick}
                   size="lg"
-                  className="w-full bg-gold hover:bg-gold-600 text-white"
+                  className="w-full bg-berry hover:bg-berry-600 text-white"
                 >
-                  Check Your Options
+                  Explore Options
                 </Button>
               </CardFooter>
             </Card>
@@ -181,7 +181,7 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
           className="text-center mt-12"
         >
           <p className="text-sm text-gray-500">
-            We also accept most major dental insurance plans. Contact us to
+            We also work with most major health insurance providers for diagnostic procedures. Contact us to
             verify your coverage.
           </p>
         </motion.div>

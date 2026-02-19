@@ -4,40 +4,40 @@ import { GeistSans } from 'geist/font/sans';
 import VoiceflowChat from '@/components/VoiceflowChat';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://frosts-dental.com'), // Replace with actual domain when live
-  title: 'Frosts Dental Practice | Premium Boutique Dentistry in Austin, TX',
+  metadataBase: new URL('https://frosts-fertility.com'), // Replace with actual domain when live
+  title: 'Frosts Fertility Clinic | Compassionate Family Building in Austin, TX',
   description:
-    'Escape the clinical cold. Experience world-class artistry and gentle precision in our South Congress studio. Invisalign, Whitening & Implants. 0% finance available.',
+    'Experience compassionate care and advanced fertility solutions. Start your journey to parenthood in our South Congress studio. IVF, Egg Freezing & Consultations.',
   keywords: [
-    'Austin Dentist',
-    'Boutique Dentistry',
-    'South Congress Dental',
-    'Invisalign Austin',
-    'Cosmetic Dentist Austin',
-    'Teeth Whitening Austin',
-    'Dental Implants',
-    'Emergency Dentist Austin',
+    'Austin Fertility Clinic',
+    'Fertility Specialist Austin',
+    'IVF Austin',
+    'Egg Freezing Austin',
+    'Parenthood Journey',
+    'Fertility Treatments',
+    'Compassionate Fertility Care',
+    'Family Building Austin',
   ],
   openGraph: {
-    title: 'Frosts Dental Practice | Premium Boutique Dentistry',
+    title: 'Frosts Fertility Clinic | Compassionate Family Building',
     description:
-      'Experience dental care redefined. World-class artistry meeting medical precision in Austin, TX.',
+      'Experience fertility care redefined. Advanced solutions meeting compassionate care in Austin, TX.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Frosts Dental Practice',
+    siteName: 'Frosts Fertility Clinic',
     images: [
       {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Frosts Dental Practice - Premium Boutique Studio',
+        alt: 'Frosts Fertility Clinic - Compassionate Support',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Frosts Dental Practice | Boutique Austin Dentistry',
-    description: 'Transform your smile with premium care in South Congress. 0% finance available.',
+    title: 'Frosts Fertility Clinic | Boutique Austin Fertility',
+    description: 'Start your journey to parenthood with advanced care in South Congress. Compassionate support available.',
     images: ['/og-image.png'],
   },
   icons: {

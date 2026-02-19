@@ -9,9 +9,11 @@ interface LeadCaptureProps {
   onBookingClick: () => void;
 }
 
+import { Heart } from 'lucide-react';
+
 export default function LeadCapture({ onBookingClick }: LeadCaptureProps) {
   return (
-    <section className="py-20 bg-gradient-to-br from-navy to-navy-800">
+    <section className="py-20 bg-gradient-to-br from-berry to-berry-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,37 +23,37 @@ export default function LeadCapture({ onBookingClick }: LeadCaptureProps) {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Start Your Smile Conversation
+            Start Your Fertility Conversation
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            Tell us about your goals. We're here to help you navigate your journey to a healthier, more confident smile with our pain-free, personalized approach.
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Tell us about your dreams. We’re here to help you navigate your journey with gentle, personalized care in our boutique Austin studio.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <div className="flex items-center space-x-2 text-white">
-              <CheckCircle className="w-5 h-5 text-teal" />
-              <span>Free Consultation</span>
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">
+            <div className="flex items-center space-x-2 text-white/90">
+              <Heart className="w-5 h-5 text-rose fill-rose/20" />
+              <span className="font-medium">Free Expert Consultation</span>
             </div>
-            <div className="flex items-center space-x-2 text-white">
-              <CheckCircle className="w-5 h-5 text-teal" />
-              <span>0% Finance Available</span>
+            <div className="flex items-center space-x-2 text-white/90">
+              <Heart className="w-5 h-5 text-rose fill-rose/20" />
+              <span className="font-medium">Fertility Financing Plans</span>
             </div>
-            <div className="flex items-center space-x-2 text-white">
-              <CheckCircle className="w-5 h-5 text-teal" />
-              <span>Same-Day Appointments</span>
+            <div className="flex items-center space-x-2 text-white/90">
+              <Heart className="w-5 h-5 text-rose fill-rose/20" />
+              <span className="font-medium">Discreet Boutique Studio</span>
             </div>
           </div>
 
           <Button
             onClick={onBookingClick}
             size="lg"
-            className="bg-teal hover:bg-teal-600 text-white text-lg px-12 py-6 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all"
+            className="bg-rose hover:bg-rose-600 text-white text-lg px-12 py-7 rounded-2xl shadow-xl hover:shadow-[0_20px_40px_rgba(244,184,184,0.3)] transform hover:-translate-y-1 transition-all font-bold"
           >
-            Book My Free Consultation
+            Book Your Private Consultation
           </Button>
 
-          <p className="text-sm text-gray-400 mt-6">
-            No obligation. No hidden fees. Just honest, expert dental care.
+          <p className="text-sm text-white/50 mt-8">
+            Completely confidential. No obligation. Just world-class expertise and care.
           </p>
         </motion.div>
       </div>

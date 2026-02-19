@@ -8,10 +8,10 @@ import { Sparkles, ArrowRight } from 'lucide-react';
 
 const cases = [
     {
-        title: 'Invisalign Transformation',
-        subtitle: '11 months to a perfect smile',
-        before: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=800', // Placeholder but realistic
-        after: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&q=80&w=800',
+        title: 'IVF Journey',
+        subtitle: 'Personalized support at every step',
+        before: 'https://images.unsplash.com/photo-1579152276502-53b8a3e144fe?auto=format&fit=crop&q=80&w=800',
+        after: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=800',
     }
 ];
 
@@ -32,15 +32,15 @@ export default function PatientTransformations() {
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                     >
-                        <Badge className="bg-teal/10 text-teal hover:bg-teal/20 mb-4 px-4 py-1 rounded-full border-teal/20">
-                            The Frost Results
+                        <Badge className="bg-rose/10 text-rose hover:bg-rose/20 mb-4 px-4 py-1 rounded-full border-rose/20">
+                            The Frost Philosophy
                         </Badge>
                     </motion.div>
-                    <h2 className="text-4xl md:text-6xl font-bold text-navy mb-6 tracking-tight">
-                        See the <span className="text-teal">Visible Difference.</span>
+                    <h2 className="text-4xl md:text-6xl font-bold text-berry mb-6 tracking-tight">
+                        Experience the <span className="text-rose">Boutique Difference.</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-2xl leading-relaxed">
-                        Drag the slider to see how Dr. Frost combines medical precision with aesthetic artistry to create life-changing transformations.
+                        We combine cutting-edge reproductive technology with a nurturing environment designed to support your emotional and physical well-being.
                     </p>
                 </div>
 
@@ -53,27 +53,27 @@ export default function PatientTransformations() {
                         className="premium-glass p-4 rounded-[2.5rem] bg-gray-50/50"
                     >
                         <ComparisonSlider
-                            beforeImage="/images/transformations/sarah_before.png"
-                            afterImage="/images/transformations/sarah_after.png"
+                            beforeImage="/images/transformations/studio_view.png"
+                            afterImage="/images/transformations/care_detail.png"
                         />
                     </motion.div>
 
-                    <div className="mt-12 flex flex-col md:flex-row items-center justify-between bg-navy rounded-[2rem] p-8 md:p-12 text-white shadow-2xl">
+                    <div className="mt-12 flex flex-col md:flex-row items-center justify-between bg-berry rounded-[2rem] p-8 md:p-12 text-white shadow-2xl">
                         <div className="mb-8 md:mb-0">
                             <h3 className="text-2xl font-bold mb-2 flex items-center gap-2">
-                                <Sparkles className="w-6 h-6 text-gold" />
-                                Featured Case: Sarah M.
+                                <Sparkles className="w-6 h-6 text-rose" />
+                                Personalized Care: Sarah M.
                             </h3>
                             <p className="text-gray-300 text-lg max-w-md">
-                                "I was self-conscious for 15 years. This 11-month Invisalign treatment was virtually invisible and completely life-changing."
+                                &ldquo;Moving from a cold hospital setting to the Frosts studio was a revelation. I felt seen, heard, and supported throughout my IVF journey.&rdquo;
                             </p>
                         </div>
                         <Button
                             onClick={scrollToQuiz}
                             size="lg"
-                            className="bg-teal hover:bg-teal-600 text-white px-8 py-7 rounded-xl text-lg font-bold transition-all transform hover:-translate-y-1 group"
+                            className="bg-rose hover:bg-rose-600 text-white px-8 py-7 rounded-xl text-lg font-bold transition-all transform hover:-translate-y-1 group"
                         >
-                            Get Your Smile Assessment
+                            Start Your Assessment
                             <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                     </div>

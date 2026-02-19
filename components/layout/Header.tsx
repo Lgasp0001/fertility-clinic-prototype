@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Phone, Castle } from 'lucide-react';
+import { Menu, X, Phone, Heart } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { usePathname, useRouter } from 'next/navigation';
 import Magnetic from '@/components/ui/Magnetic';
@@ -28,7 +28,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Treatments', href: '#treatments' },
+    { name: 'Services', href: '#treatments' },
     { name: 'Testimonials', href: '#testimonials' },
     { name: 'FAQs', href: '#faqs' },
     { name: 'Contact', href: '/contact' },
@@ -61,13 +61,13 @@ export default function Header({ onBookingClick }: HeaderProps) {
             {/* Logo */}
             <Link href="/" className="flex flex-col items-center group relative -bottom-1">
               <Magnetic>
-                <div className={`w-10 h-10 bg-navy rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all shadow-lg ring-4 ${isScrolled ? 'ring-teal/5' : 'ring-white/10'}`}>
-                  <Castle className="w-6 h-6 text-teal" />
+                <div className={`w-10 h-10 bg-berry rounded-xl flex items-center justify-center transform group-hover:scale-105 transition-all shadow-lg ring-4 ${isScrolled ? 'ring-rose/5' : 'ring-white/10'}`}>
+                  <Heart className="w-6 h-6 text-rose" />
                 </div>
               </Magnetic>
               <div className="flex flex-col items-center">
                 <span className="text-[12px] font-black uppercase tracking-tight text-black">Frosts</span>
-                <span className="text-[8px] font-bold text-teal uppercase tracking-[0.2em]">Dental Practice</span>
+                <span className="text-[8px] font-bold text-rose uppercase tracking-[0.2em]">Fertility Clinic</span>
               </div>
             </Link>
 
@@ -78,14 +78,14 @@ export default function Header({ onBookingClick }: HeaderProps) {
                   {link.href.startsWith('#') ? (
                     <button
                       onClick={() => handleNavClick(link.href)}
-                      className="transition-all duration-300 font-bold text-sm tracking-widest uppercase text-black hover:text-teal"
+                      className="transition-all duration-300 font-bold text-sm tracking-widest uppercase text-black hover:text-rose"
                     >
                       {link.name}
                     </button>
                   ) : (
                     <Link
                       href={link.href}
-                      className="transition-all duration-300 font-bold text-sm tracking-widest uppercase text-black hover:text-teal"
+                      className="transition-all duration-300 font-bold text-sm tracking-widest uppercase text-black hover:text-rose"
                     >
                       {link.name}
                     </Link>
@@ -98,7 +98,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
             <div className="hidden md:flex items-center">
               <Button
                 onClick={onBookingClick}
-                className="bg-white hover:bg-navy hover:text-white text-teal border-2 border-navy px-6 py-5 rounded-xl font-bold shadow-sm transition-all"
+                className="bg-white hover:bg-berry hover:text-white text-rose border-2 border-berry px-6 py-5 rounded-xl font-bold shadow-sm transition-all"
               >
                 Book Now
               </Button>
@@ -128,7 +128,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
                 {link.href.startsWith('#') ? (
                   <button
                     onClick={() => handleNavClick(link.href)}
-                    className="text-2xl font-medium text-navy hover:text-teal transition-colors w-full text-left"
+                    className="text-2xl font-medium text-berry hover:text-rose transition-colors w-full text-left"
                   >
                     {link.name}
                   </button>
@@ -136,7 +136,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="text-2xl font-medium text-navy hover:text-teal transition-colors block"
+                    className="text-2xl font-medium text-berry hover:text-rose transition-colors block"
                   >
                     {link.name}
                   </Link>
@@ -147,7 +147,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
             <div className="pt-6 border-t border-gray-200 space-y-4">
               <a
                 href="tel:5125550198"
-                className="flex items-center space-x-2 text-navy hover:text-teal transition-colors"
+                className="flex items-center space-x-2 text-berry hover:text-rose transition-colors"
               >
                 <Phone className="w-5 h-5" />
                 <span className="font-medium text-lg">(512) 555-0198</span>
@@ -157,7 +157,7 @@ export default function Header({ onBookingClick }: HeaderProps) {
                   onBookingClick();
                   setIsMobileMenuOpen(false);
                 }}
-                className="w-full bg-teal hover:bg-teal-600 text-white"
+                className="w-full bg-rose hover:bg-rose-600 text-white"
                 size="lg"
               >
                 Book Consultation

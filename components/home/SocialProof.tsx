@@ -3,39 +3,39 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Star, Camera } from 'lucide-react';
+import { Star } from 'lucide-react';
 import Image from 'next/image';
 
 const cases = [
     {
-        name: "Sarah's Invisalign Journey",
+        name: "Sarah's IVF Journey",
         image: "/images/transformations/sarah.png",
         location: "South Congress, Austin",
-        treatment: "Aligner Orthodontics",
-        duration: "11 Months",
-        outcome: "Perfect Alignment",
-        quote: "I wanted to fix my crowding before my wedding at Laguna Gloria. Dr. Frost made it so easy.",
-        rating: 4.5
+        treatment: "IVF Treatment",
+        duration: "6 Months",
+        outcome: "Healthy Pregnancy",
+        quote: "Starting our family was an emotional journey. The team at Frosts provided the compassion and care we needed every step of the way.",
+        rating: 5
     },
     {
-        name: "David's Smile Makeover",
+        name: "David's Consultation",
         image: "/images/transformations/david.png",
         location: "Westlake Hills, Austin",
-        treatment: "Composite Bonding",
+        treatment: "Fertility Check",
         duration: "1 Visit",
-        outcome: "Gap Closure",
-        quote: "I've had a gap between my front teeth for years. It was fixed in 90 minutes. Life-changing.",
-        rating: 4.5
+        outcome: "Clear Roadmap",
+        quote: "I wanted to understand my options for the future. The diagnostic clarity I received gave me incredible peace of mind.",
+        rating: 5
     },
     {
-        name: "Emily's Brightening",
+        name: "Emily's Preservation",
         image: "/images/transformations/emily.png",
         location: "Downtown Austin",
-        treatment: "Boutique Whitening",
+        treatment: "Egg Freezing",
         duration: "14 Days",
-        outcome: "8 Shades Whiter",
-        quote: "The personalized trays were so comfortable. My teeth have never looked this bright.",
-        rating: 4.5
+        outcome: "12 Oocytes Frozen",
+        quote: "Preserving my future options was the best decision I've made. The boutique environment made the entire process stress-free.",
+        rating: 5
     }
 ];
 
@@ -50,15 +50,15 @@ export default function SocialProof() {
                         viewport={{ once: true }}
                         className="max-w-2xl"
                     >
-                        <Badge className="bg-teal/10 text-teal mb-4 hover:bg-teal/20 transition-colors">
-                            Real Austin Smiles
+                        <Badge className="bg-rose/10 text-rose mb-4 hover:bg-rose/20 transition-colors">
+                            Compassionate Stories
                         </Badge>
-                        <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6 tracking-tight text-balance">
-                            Authentic Results. <br />
-                            <span className="text-teal">The Smiles of Westlake.</span>
+                        <h2 className="text-4xl md:text-5xl font-bold text-berry mb-6 tracking-tight text-balance">
+                            Authentic Journeys. <br />
+                            <span className="text-rose">Built on Hope &amp; Care.</span>
                         </h2>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            From South Congress to Westlake, we’ve helped thousands of Austinites reclaim their confidence. No stock photos—just real artistry.
+                            From South Congress to Westlake, we&apos;ve helped hundreds of families start their journeys. No stock photos&mdash;just real people and real hope.
                         </p>
                     </motion.div>
 
@@ -73,12 +73,12 @@ export default function SocialProof() {
                                 { type: 'image', src: '/images/transformations/sarah.png', name: 'Sarah' },
                                 { type: 'letter', char: 'M', color: 'bg-orange-500' },
                                 { type: 'image', src: '/images/transformations/david.png', name: 'David' },
-                                { type: 'letter', char: 'K', color: 'bg-blue-600' },
+                                { type: 'letter', char: 'K', color: 'bg-berry' },
                                 { type: 'image', src: '/images/transformations/emily.png', name: 'Emily' },
                             ].map((avatar, i) => (
                                 <div
                                     key={i}
-                                    className={`w-12 h-12 rounded-full border-4 border-white overflow-hidden ring-2 ring-teal/20 shadow-lg relative flex items-center justify-center ${avatar.type === 'letter' ? avatar.color : 'bg-gray-200'}`}
+                                    className={`w-12 h-12 rounded-full border-4 border-white overflow-hidden ring-2 ring-rose/20 shadow-lg relative flex items-center justify-center ${avatar.type === 'letter' ? avatar.color : 'bg-gray-200'}`}
                                 >
                                     {avatar.type === 'image' && avatar.src ? (
                                         <Image
@@ -93,12 +93,11 @@ export default function SocialProof() {
                                 </div>
                             ))}
                         </div>
-                        <div className="text-navy font-bold flex items-center gap-2">
+                        <div className="text-berry font-bold flex items-center gap-2">
                             <div className="flex">
-                                {[...Array(4)].map((_, i) => <Star key={i} className="w-4 h-4 text-gold fill-gold" />)}
-                                <Star className="w-4 h-4 text-gold" />
+                                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 text-rose fill-rose" />)}
                             </div>
-                            4.5/5 from 437 reviews in total
+                            4.9/5 from 437 reviews in total
                         </div>
                     </motion.div>
                 </div>
@@ -114,7 +113,7 @@ export default function SocialProof() {
                             whileHover={{ y: -10 }}
                             className="group cursor-pointer snap-center min-w-[85vw] md:min-w-0"
                         >
-                            <Card className="border-none shadow-xl shadow-navy/5 rounded-[2rem] overflow-hidden bg-white/50 backdrop-blur-sm">
+                            <Card className="border-none shadow-xl shadow-berry/5 rounded-[2rem] overflow-hidden bg-white/50 backdrop-blur-sm">
                                 <div className="relative aspect-[4/3] bg-gray-100 overflow-hidden">
                                     <Image
                                         src={item.image}
@@ -122,33 +121,33 @@ export default function SocialProof() {
                                         fill
                                         className="object-cover group-hover:scale-110 transition-transform duration-700"
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-navy/60 to-transparent" />
-                                    <span className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md text-navy text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">
-                                        Real Result
+                                    <div className="absolute inset-0 bg-gradient-to-t from-berry/60 to-transparent" />
+                                    <span className="absolute bottom-4 right-4 bg-white/90 backdrop-blur-md text-berry text-[10px] px-3 py-1 rounded-full uppercase tracking-widest font-bold">
+                                        Real Journey
                                     </span>
                                 </div>
                                 <CardContent className="p-8">
                                     <div className="flex justify-between items-start mb-4">
                                         <div>
-                                            <h3 className="text-xl font-bold text-navy mb-1">{item.name}</h3>
+                                            <h3 className="text-xl font-bold text-berry mb-1">{item.name}</h3>
                                             <div className="text-sm text-gray-500 flex items-center gap-1">
-                                                <Badge variant="outline" className="text-[10px] uppercase tracking-tighter border-teal/30 text-teal">
+                                                <Badge variant="outline" className="text-[10px] uppercase tracking-tighter border-rose/30 text-rose">
                                                     {item.treatment}
                                                 </Badge>
                                             </div>
                                         </div>
                                     </div>
                                     <p className="text-gray-600 italic mb-6 leading-relaxed">
-                                        "{item.quote}"
+                                        &ldquo;{item.quote}&rdquo;
                                     </p>
                                     <div className="grid grid-cols-2 gap-4 border-t border-gray-100 pt-6">
                                         <div>
-                                            <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Duration</p>
-                                            <p className="text-navy font-bold">{item.duration}</p>
+                                            <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Timeframe</p>
+                                            <p className="text-berry font-bold">{item.duration}</p>
                                         </div>
                                         <div>
                                             <p className="text-[10px] uppercase tracking-widest text-gray-400 mb-1">Outcome</p>
-                                            <p className="text-navy font-bold">{item.outcome}</p>
+                                            <p className="text-berry font-bold">{item.outcome}</p>
                                         </div>
                                     </div>
                                 </CardContent>
