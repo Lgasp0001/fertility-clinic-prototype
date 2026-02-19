@@ -159,33 +159,6 @@
 }
 
 /* Global Smoothness */
-/* Voiceflow Mobile Positioning */
-/* Voiceflow Launcher Positioning - Stacked above Back-to-Top */
-/* Using broad selectors to catch different widget parts/tabs like "Test your agent" */
-/* AI Chatbot - Center Right Positioning */
-/* Target only the launcher/bubble to avoid breaking the chat window when it opens */
-html body .vfrc-launcher,
-html body .vfrc-widget-launcher,
-html body [class*="vfrc-launcher"],
-html body #voiceflow-chat-container {
-  bottom: 50% !important;
-  right: 32px !important;
-  left: auto !important;
-  top: auto !important;
-  transform: translateY(50%) !important;
-  z-index: 999999 !important;
-  position: fixed !important;
-}
-
-@media (max-width: 768px) {
-
-  html body .vfrc-launcher,
-  html body .vfrc-widget-launcher,
-  html body [class*="vfrc-launcher"] {
-    right: 16px !important;
-    bottom: 50% !important;
-  }
-}
 
 ::selection {
   @apply bg-rose/30 text-berry;
