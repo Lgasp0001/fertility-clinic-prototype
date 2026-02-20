@@ -1,6 +1,6 @@
 # Implementation Plan: Website Metadata & Social Branding
 
-This plan outlines the steps to replace generic "bolt previews" with a custom, high-quality snapshot of the **Frosts Dental Practice** website and implement a robust metadata system for SEO and social media sharing.
+This plan outlines the steps to replace generic placeholder previews with a custom, high-quality snapshot of the **Frosts Dental Practice** website and implement a robust metadata system for SEO and social media sharing.
 
 ## Phase 1: Asset Preparation
 
