@@ -2,6 +2,7 @@ import './globals.css';
 import React from 'react';
 import type { Metadata } from 'next';
 import { GeistSans } from 'geist/font/sans';
+import VoiceflowChat from '@/components/VoiceflowChat';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://frosts-fertility.com'), // Replace with actual domain when live
@@ -56,6 +57,7 @@ export default function RootLayout({
       <body className={GeistSans.className}>
         <div className="grain-overlay" aria-hidden="true" />
         {children}
+        <VoiceflowChat />
       </body>
     </html>
   );
