@@ -51,7 +51,7 @@ export default function VoiceflowChat() {
                                   z-index: 10001 !important;
                                 }
                                 .vfrc-chat__container {
-                                  bottom: 150px !important;
+                                  bottom: 80px !important;
                                   z-index: 10001 !important;
                                 }
                             `;
