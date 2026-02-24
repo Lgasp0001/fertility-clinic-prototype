@@ -47,10 +47,12 @@ export default function VoiceflowChat() {
                             const style = document.createElement('style');
                             style.innerHTML = `
                                 .vfrc-launcher__container {
-                                  bottom: 76px !important;
+                                  bottom: 276px !important;
+                                  z-index: 10001 !important;
                                 }
                                 .vfrc-chat__container {
-                                  bottom: 20px !important;
+                                  bottom: 200px !important;
+                                  z-index: 10001 !important;
                                 }
                             `;
 
@@ -58,7 +60,11 @@ export default function VoiceflowChat() {
                             const interval = setInterval(() => {
                                 const chatElement = document.querySelector('#voiceflow-chat');
                                 if (chatElement && chatElement.shadowRoot) {
-                                    chatElement.shadowRoot.appendChild(style);
+                                    const existingStyle = chatElement.shadowRoot.querySelector('style#vf-custom-style');
+                                    if (!existingStyle) {
+                                        style.id = 'vf-custom-style';
+                                        chatElement.shadowRoot.appendChild(style);
+                                    }
                                     clearInterval(interval);
                                 }
                             }, 100);
