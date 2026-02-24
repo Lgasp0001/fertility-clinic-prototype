@@ -37,7 +37,7 @@ export default function VoiceflowChat() {
                 script.onload = () => {
                     if (window.voiceflow && window.voiceflow.chat) {
                         window.voiceflow.chat.load({
-                            verify: { projectID: '699261a9d6a662d6c77cb9cc' },
+                            verify: { projectID: '699b748d7b0cb5ed725f7944' },
                             url: 'https://general-runtime.voiceflow.com',
                             versionID: 'production',
                             voice: {
@@ -47,7 +47,7 @@ export default function VoiceflowChat() {
                             const style = document.createElement('style');
                             style.innerHTML = `
                                 .vfrc-launcher__container {
-                                  bottom: 200px !important;
+                                  bottom: 76px !important;
                                 }
                                 .vfrc-chat__container {
                                   bottom: 20px !important;
