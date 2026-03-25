@@ -147,6 +147,10 @@ export default function BookingModal({
                 </Select>
               </div>
 
+              <p className="text-[14px] text-[#666] text-center italic leading-snug">
+                ℹ Once submitted, our team will contact you within 24 hours to guide your next steps.
+              </p>
+
               <Button
                 type="submit"
                 className={`w-full py-6 text-lg rounded-xl transition-all duration-300 font-bold ${isFormValid

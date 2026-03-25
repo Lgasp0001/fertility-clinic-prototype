@@ -153,6 +153,10 @@ export default function AssessmentQuiz() {
                                             <p className="text-red-500 text-xs mt-1 ml-1">Please include an &apos;@&apos; in the email address.</p>
                                         )}
                                     </div>
+                                    <p className="text-[14px] text-[#888] text-center italic leading-snug -mb-1">
+                                        ℹ We&apos;ll review your details and get back to you within 24–48 hours.
+                                    </p>
+
                                     <Button
                                         size="lg"
                                         onClick={() => isEmailValid && setIsEmailSubmitted(true)}
