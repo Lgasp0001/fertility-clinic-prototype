@@ -285,6 +285,10 @@ export default function ContactPage() {
                               />
                             </div>
 
+                            <p className="text-sm text-gray-500 text-center italic mb-4">
+                              Once submitted, our team will contact you within 48 hours to guide your next steps.
+                            </p>
+
                             <Button
                               type="submit"
                               className={`w-full py-6 text-lg transition-all duration-300 font-bold ${isFormValid
@@ -294,10 +298,6 @@ export default function ContactPage() {
                             >
                               Send Message
                             </Button>
-
-                            <p className="text-xs text-gray-500 text-center">
-                              We&apos;ll get back to you within 2 business hours.
-                            </p>
                           </form>
                         );
                       })()}
@@ -316,8 +316,8 @@ export default function ContactPage() {
 
                       <p className="text-gray-600 mb-6">
                         Thank you for contacting us, {formData.name}. Our team
-                        will review your message and get back to you within 2
-                        business hours.
+                        will review your message and get back to you within 48
+                        hours.
                       </p>
 
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -148,7 +148,7 @@ export default function BookingModal({
               </div>
 
               <p className="text-[14px] text-[#666] text-center italic leading-snug">
-                ℹ Once submitted, our team will contact you within 24 hours to guide your next steps.
+                Once submitted, our team will contact you within 48 hours to guide your next steps.
               </p>
 
               <Button
@@ -162,8 +162,7 @@ export default function BookingModal({
               </Button>
 
               <p className="text-[10px] text-gray-400 text-center uppercase tracking-widest leading-relaxed">
-                By submitting, you agree to our Privacy Policy. We respect your confidentiality and will
-                contact you within 2 business hours.
+                By submitting, you agree to our Privacy Policy. Our team will contact you within 48 hours to guide your next steps.
               </p>
             </form>
           </div>
@@ -179,7 +178,7 @@ export default function BookingModal({
 
             <p className="text-gray-600 mb-6 leading-relaxed">
               Thank you, {formData.name}. Our Care Coordinator, Sarah, will
-              reach out discreetly within 2 business hours to
+              reach out discreetly within 48 hours to
               finalize your private consultation time.
             </p>
 

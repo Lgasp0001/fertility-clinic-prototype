@@ -154,7 +154,7 @@ export default function AssessmentQuiz() {
                                         )}
                                     </div>
                                     <p className="text-[14px] text-[#888] text-center italic leading-snug -mb-1">
-                                        ℹ We&apos;ll review your details and get back to you within 24–48 hours.
+                                        Once submitted, our team will contact you within 48 hours to guide your next steps.
                                     </p>
 
                                     <Button
