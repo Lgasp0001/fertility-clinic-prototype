@@ -89,7 +89,10 @@ export default function PricingSection({ onBookingClick }: PricingSectionProps) 
                   </li>
                 </ul>
               </CardContent>
-              <CardFooter>
+              <CardFooter className="flex flex-col gap-4">
+                <p className="text-xs text-gray-500 italic text-center leading-snug px-4">
+                  A fertility consultation covers your history, tests, treatment options, costs, and next steps.
+                </p>
                 <Button
                   onClick={onBookingClick}
                   size="lg"

@@ -67,13 +67,18 @@ export default function FAQSection({ onBookingClick }: FAQSectionProps) {
           <p className="text-gray-600 mb-4">
             Still have questions? We’re here to help.
           </p>
-          <Button
-            onClick={onBookingClick}
-            size="lg"
-            className="bg-rose hover:bg-rose-600 text-white px-8 py-6 rounded-xl text-lg font-bold transition-all"
-          >
-            Start Your Journey
-          </Button>
+          <div className="flex flex-col items-center gap-4">
+            <p className="text-sm text-gray-500 italic max-w-md mx-auto">
+              A fertility consultation covers your history, tests, treatment options, costs, and next steps.
+            </p>
+            <Button
+              onClick={onBookingClick}
+              size="lg"
+              className="bg-rose hover:bg-rose-600 text-white px-8 py-6 rounded-xl text-lg font-bold transition-all"
+            >
+              Start Your Journey
+            </Button>
+          </div>
         </motion.div>
       </div>
     </section>

@@ -286,7 +286,7 @@ export default function ContactPage() {
                             </div>
 
                             <p className="text-sm text-gray-500 text-center italic mb-4">
-                              Once submitted, our team will contact you within 48 hours to guide your next steps.
+                              A fertility consultation covers your history, tests, treatment options, costs, and next steps. Our team will contact you within 48 hours to guide your next steps.
                             </p>
 
                             <Button
@@ -401,6 +401,9 @@ export default function ContactPage() {
               >
                 Book My Free Consultation
               </Button>
+              <p className="mt-4 text-gray-300 text-sm italic">
+                Consultation covers your history, tests, treatment options, costs, and next steps.
+              </p>
             </motion.div>
           </div>
         </section>

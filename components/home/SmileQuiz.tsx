@@ -154,7 +154,7 @@ export default function AssessmentQuiz() {
                                         )}
                                     </div>
                                     <p className="text-[14px] text-[#888] text-center italic leading-snug -mb-1">
-                                        Once submitted, our team will contact you within 48 hours to guide your next steps.
+                                        A fertility consultation covers your history, tests, treatment options, costs, and next steps. Our team will contact you within 48 hours to guide your next steps.
                                     </p>
 
                                     <Button

@@ -68,14 +68,19 @@ export default function PatientTransformations() {
                                 &ldquo;Moving from a cold hospital setting to the Frosts studio was a revelation. I felt seen, heard, and supported throughout my entire journey.&rdquo;
                             </p>
                         </div>
-                        <Button
-                            onClick={scrollToQuiz}
-                            size="lg"
-                            className="bg-rose hover:bg-rose-600 text-white px-8 py-7 rounded-xl text-lg font-bold transition-all transform hover:-translate-y-1 group"
-                        >
-                            Start Your Assessment
-                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                        </Button>
+                        <div className="flex flex-col items-center gap-4">
+                            <Button
+                                onClick={scrollToQuiz}
+                                size="lg"
+                                className="bg-rose hover:bg-rose-600 text-white px-8 py-7 rounded-xl text-lg font-bold transition-all transform hover:-translate-y-1 group"
+                            >
+                                Start Your Assessment
+                                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                            </Button>
+                            <p className="text-[10px] text-white/50 uppercase tracking-widest text-center">
+                                Consultation covers history, tests, options, costs \u0026 next steps
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

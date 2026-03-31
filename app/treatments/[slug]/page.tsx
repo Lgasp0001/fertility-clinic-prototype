@@ -69,20 +69,25 @@ export default function TreatmentPage() {
               <p className="text-2xl text-gray-200 mb-8">
                 {treatment.shortDescription}
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Button
-                  onClick={() => setIsBookingModalOpen(true)}
-                  size="lg"
-                  className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
-                >
-                  Book My Private Consultation
-                </Button>
-                <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
-                  <div className="text-sm text-gray-300">Starting from</div>
-                  <div className="text-2xl font-bold text-white">
-                    {treatment.priceStarting}
+              <div className="flex flex-col gap-4">
+                <div className="flex flex-wrap gap-4">
+                  <Button
+                    onClick={() => setIsBookingModalOpen(true)}
+                    size="lg"
+                    className="bg-rose hover:bg-rose-600 text-white border-none shadow-xl shadow-rose/20"
+                  >
+                    Book My Private Consultation
+                  </Button>
+                  <div className="bg-white/10 backdrop-blur-sm px-6 py-3 rounded-xl border border-white/20">
+                    <div className="text-sm text-gray-300">Starting from</div>
+                    <div className="text-2xl font-bold text-white">
+                      {treatment.priceStarting}
+                    </div>
                   </div>
                 </div>
+                <p className="text-sm text-gray-300 italic">
+                  Consultation covers your history, tests, treatment options, costs, and next steps.
+                </p>
               </div>
             </motion.div>
           </div>
@@ -239,7 +244,10 @@ export default function TreatmentPage() {
               >
                 Book My Free Consultation
               </Button>
-              <p className="text-sm text-gray-400 mt-4">
+              <p className="text-sm text-gray-400 mt-4 italic">
+                A fertility consultation covers your history, tests, treatment options, costs, and next steps.
+              </p>
+              <p className="text-sm text-gray-400 mt-2">
                 Specialized financing available • Private boutique studio • Dedicated care team
               </p>
             </motion.div>

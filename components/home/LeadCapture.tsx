@@ -52,6 +52,10 @@ export default function LeadCapture({ onBookingClick }: LeadCaptureProps) {
             Book Your Private Consultation
           </Button>
 
+          <p className="text-sm text-white/70 mt-6 italic max-w-lg mx-auto">
+            A fertility consultation covers your history, tests, treatment options, costs, and next steps.
+          </p>
+
           <p className="text-sm text-white/50 mt-8">
             Completely confidential. No obligation. Just world-class expertise and care.
           </p>

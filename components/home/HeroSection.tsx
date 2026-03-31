@@ -103,17 +103,22 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             transition={{ duration: 0.8, delay: 1 }}
             className="flex flex-col sm:flex-row gap-5 justify-center items-center"
           >
-            <Magnetic>
-              <motion.div whileTap={{ scale: 0.95 }}>
-                <Button
-                  onClick={onBookingClick}
-                  size="lg"
-                  className="bg-rose hover:bg-rose-600 text-white text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-rose/20 transition-all font-semibold"
-                >
-                  Start Your Journey
-                </Button>
-              </motion.div>
-            </Magnetic>
+            <div className="flex flex-col items-center">
+              <Magnetic>
+                <motion.div whileTap={{ scale: 0.95 }}>
+                  <Button
+                    onClick={onBookingClick}
+                    size="lg"
+                    className="bg-rose hover:bg-rose-600 text-white text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-rose/20 transition-all font-semibold"
+                  >
+                    Start Your Journey
+                  </Button>
+                </motion.div>
+              </Magnetic>
+              <p className="mt-4 text-xs md:text-sm text-gray-200/80 font-medium tracking-wide">
+                Consultation covers history, tests, treatment options, costs & next steps
+              </p>
+            </div>
             <Magnetic>
               <motion.div whileTap={{ scale: 0.95 }}>
                 <Button
