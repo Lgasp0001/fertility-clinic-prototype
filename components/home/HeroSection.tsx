@@ -101,9 +101,9 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1 }}
-            className="flex flex-col sm:flex-row gap-5 justify-center items-center"
+            className="flex flex-col items-center gap-6"
           >
-            <div className="flex flex-col items-center">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
               <Magnetic>
                 <motion.div whileTap={{ scale: 0.95 }}>
                   <Button
@@ -115,22 +115,22 @@ export default function HeroSection({ onBookingClick }: HeroSectionProps) {
                   </Button>
                 </motion.div>
               </Magnetic>
-              <p className="mt-4 text-xs md:text-sm text-gray-200/80 font-medium tracking-wide">
-                Consultation covers history, tests, treatment options, costs & next steps
-              </p>
+              <Magnetic>
+                <motion.div whileTap={{ scale: 0.95 }}>
+                  <Button
+                    onClick={scrollToTreatments}
+                    size="lg"
+                    variant="outline"
+                    className="bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all"
+                  >
+                    Explore Our Services
+                  </Button>
+                </motion.div>
+              </Magnetic>
             </div>
-            <Magnetic>
-              <motion.div whileTap={{ scale: 0.95 }}>
-                <Button
-                  onClick={scrollToTreatments}
-                  size="lg"
-                  variant="outline"
-                  className="bg-white/5 backdrop-blur-md border-white/20 text-white hover:bg-white/10 text-lg px-10 py-7 rounded-xl transition-all"
-                >
-                  Explore Our Services
-                </Button>
-              </motion.div>
-            </Magnetic>
+            <p className="text-xs md:text-sm text-gray-200/80 font-medium tracking-wide">
+              Consultation covers history, tests, treatment options, costs & next steps
+            </p>
           </motion.div>
 
           <motion.div
